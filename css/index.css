@@ -1,0 +1,104 @@
+body {
+	background-size: 100% 100%;
+	background:black;
+	color:white;
+	background-size: cover;
+}
+
+.custom_alert {
+	top:0;
+	left:0;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,1,0.5);
+	visibility:hidden;
+	opacity:0;
+	transition-duration:0.5s;
+}
+
+.alert_container {
+	background:black;
+	color:white;
+	text-shadow:1px 1px 3px white;
+	font-size:18px;
+	font-family:monospace;
+	text-align:justify;
+	width:55%;
+	left:20%;
+	visibility:;
+	background-color: rgba(0,0,0,1);
+	height:50%;
+	padding:5%;
+	position:absolute;
+	top:20%;
+	left:18%;
+	border-radius:10px;
+}
+
+
+a {
+	text-decoration:none;
+	color:pink;
+}
+
+#author {
+	font-family:Harrington;
+	margin-right:5%;
+	margin-top:6%;
+	max-width:50%;
+	font-size:24px;
+	font-weight:900;
+	float:right;
+	text-shadow:1px 1px 3px grey;
+	color:white;
+}
+
+#content {
+	text-align:center;
+	font-family:san serif,cursive;
+	font-size:2em;
+	margin-top:15%;
+	margin-left:10%;
+	max-width:80%;
+	word-wrap: break-word;
+	font-style:italic;
+	line-height: 1.6;
+	word-spacing: 5px;
+	text-shadow:1px 1px 3px grey;
+}
+
+#source {
+	margin-top:20%;
+	text-align:center;
+	font-weight:900;
+	font-size:18px;
+	font-family:monospace;
+	font-style:italic;
+	text-shadow:1px 1px 3px grey;
+}
+
+.linkBtn {
+	color:white;
+	position:absolute;
+	font-family:"Lucida Calligraphy";
+	font-size:18px;
+	text-shadow:1px 1px 2px grey;
+	opacity:0.6;
+	cursor:pointer;
+	transition-duration:0.5s;
+}
+
+.linkBtn:hover {
+	opacity:1.0;
+}
+
+#new {
+	top:15%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+#about {
+	
+}
