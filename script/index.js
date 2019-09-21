@@ -21,19 +21,19 @@ function setlocalstore(setTime) {
 			let imageNum = 6
 			//need to find ways to take totally random image from somewhere else
 			let image = {
-				1:{name:"star1",credits:"Photo by Francesco Ungaro from Pexels"},
-				2:{name:"star2",credits:"Photo by Lucas Ettore Chiereguini from Pexels"},
-				3:{name:"star3",credits:"Photo by Juan from Pexels"},
-				4:{name:"star4",credits:"Photo by tommy haugsveen from Pexels"},
-				5:{name:"star5",credits:"Photo by Min An from Pexels"},
-				6:{name:"star6",credits:"Photo by Philippe Donn from Pexels"},
-				7:{name:"star7",credits:"Photo by Free Nature Stock from Pexels"}
+				1:{name:"star1",credits:"Photo by <a href='https://www.pexels.com/@francesco-ungaro'>Francesco Ungaro</a>"},
+				2:{name:"star2",credits:"Photo by <a href='https://www.pexels.com/@ettore'>Lucas Ettore Chiereguini</a>"},
+				3:{name:"star3",credits:"Photo by <a href='https://www.pexels.com/@juan-230850'>Juan</a>"},
+				4:{name:"star4",credits:"Photo by <a href='https://www.pexels.com/@haugsveenphoto'>tommy haugsveen</a>"},
+				5:{name:"star5",credits:"Photo by <a href='https://www.pexels.com/@minan1398'>Min An</a>"},
+				6:{name:"star6",credits:"Photo by <a href='https://www.pexels.com/@philippedonn'>Philippe Donn</a>"},
+				7:{name:"star7",credits:"Photo by <a href='https://www.pexels.com/@free-nature-stock'>Free Nature Stock</a>"}
 			}
 			//random number from 1-7
 			let random = Math.floor(Math.random() * imageNum);
 			//changing the bg image
 			$("body").css("background-image", "url('" + image[random+1].name + ".jpg')");
-			$("#photoBy").html(image[random+1].credits);
+			$("#photoBy").html(image[random+1].credits + " from <a href='https://www.pexels.com/'>pexels</a>");
 			e.preventDefault();
 			$.ajax( {
 				url: 'https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand',
@@ -42,13 +42,7 @@ function setlocalstore(setTime) {
 					//quotes author and the contents
 					$('#author').text(" ~ " + post.title.rendered);
 					$('#content').html(post.content.rendered);
-					console.log(data)
-					
-					if (typeof post.custom_meta != 'undefined' && typeof post.custom_meta.Source != 'undefined') {
-						$('#source').html('Quote source : ' + post.custom_meta.Source);
-					} else {
-						$('#source').text('');
-					}
+					console.log(data);
 				},
 				cache: false
 			});
@@ -57,7 +51,6 @@ function setlocalstore(setTime) {
 			$(".custom_alert").html(apiLimitText);
 			$(".custom_alert").css("opacity","0.8");
 			$(".custom_alert").css("visibility","visible");
-			//$(".linkBtn").css("visibility","hidden");
 			setTimeout(()=>{
 				$(".custom_alert").css("opacity","0.0");
 				$(".custom_alert").css("visibility","hidden");
@@ -69,14 +62,24 @@ function setlocalstore(setTime) {
 
 /* Set the width of the side navigation to 45% & shader opacity to 0.6 */
 function openNav() {
-	$("#sideNav").css("width","45%");
-	$(".shader").css("opacity","0.6");
-  count = 1
+	console.log(innerWidth);
+	if (window.innerWidth >= 800) {
+		$("#sideNav").css("width","40%");
+		$(".shader").css("opacity","0.6");
+		$(".shader").css("display","block");
+	}else {
+		$("#sideNav").css("width","100%");
+	}
 }
 
 /* Set the width of the side navigation to 0 & shader opacity to 0*/
 function closeNav() {
-	$("#sideNav").css("width","0");
-	$(".shader").css("opacity","0");
-	count = 0
+	console.log(window.innerWidth);
+	if (window.innerWidth >= 800) {
+		$("#sideNav").css("width","0");
+		$(".shader").css("opacity","0");
+		$(".shader").css("display","none");
+	}else {
+		$("#sideNav").css("width","0");
+	}
 }

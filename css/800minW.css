@@ -1,0 +1,183 @@
+body {
+	background-size: 100% 100%;
+	background:black;
+	color:white;
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+
+.custom_alert {
+	top:15%;
+	padding:1%;
+	transform:translate(-50%,-50%);
+	left:50%;
+	position:fixed;
+	background-color: rgba(1,1,1,0.8);
+	visibility:hidden;
+	opacity:0;
+	z-index:3;
+	transition-duration:0.3s;
+	text-align:center;
+}
+
+.shader {
+	top:0;
+	left:0;
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color:black;
+	opacity:0;
+	z-index:2;
+	display:none;
+}
+
+#menuIcon {
+	position:fixed;
+	top:30px;
+	left:30px;
+	cursor:pointer;
+	z-index:4;
+}
+
+.menuIconPad {
+	width: 35px;
+	height: 3px;
+	background-color: white;
+	margin: 6px 0;
+	border-radius:10px;
+}
+
+#menuIcon:hover {
+	transform:scale(1.2);
+	transition:0.3s ease-out;
+}
+
+#sideNav {
+	height:100%;
+	width:0;
+	position:fixed;
+	z-index:5;
+	top:0;
+	left:0;
+	transition:0.5s ease-out;
+	background-color:#111;
+	overflow-y:hidden;
+	padding-top:100px;
+}
+
+#sideNav .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor:pointer;
+	line-height: .75em;
+	text-decoration:none;
+	color: #818181;
+	transition: 0.3s;
+	opacity:0.6;
+	padding:1%;
+}
+
+#sideNav .closebtn:hover {
+	opacity:1.0;
+}
+
+a:visited {
+	color:grey;
+}
+
+a:hover {
+	color:white;
+}
+
+a{
+	text-decoration:none;
+	color:yellow;
+}
+
+#photoBy {
+	font-family:Georgia;
+	font-size:18px;
+	margin-left:3%;
+	background-color:rgba(1,1,1,0.6);
+	padding:1%;
+	border-radius:5px;
+	margin-bottom:10%;
+	z-index:3;
+}
+
+#sideNav div {
+	padding:0px 20px 0px 20px;
+	font-size:20px;
+	text-align:justify;
+	font-family:New Times Roman;
+	color:white;
+	text-shadow:1px 1px 2px grey;
+	opacity:0.6;
+	transition-duration:0.5s;
+	width:auto;
+	overflow-y:hidden;
+}
+
+#sideNav div:hover {
+  color: #f1f1f1;
+}
+
+#author {
+	font-family:Harrington;
+	margin-top:10%;
+	margin-bottom:10%;
+	text-align:center;
+	font-size:24px;
+	font-weight:900;
+	text-shadow:1px 1px 3px grey;
+	color:white;
+}
+
+#content {
+	text-align:center;
+	font-family:san serif,cursive;
+	font-size:2em;
+	margin-top:15%;
+	margin-left:10%;
+	max-width:80%;
+	word-wrap: break-word;
+	font-style:italic;
+	line-height: 1.6;
+	word-spacing: 5px;
+	text-shadow:1px 1px 3px grey;
+}
+
+.linkBtn {
+	color:white;
+	position:absolute;
+	font-family:"Lucida Calligraphy";
+	font-size:24px;
+	text-shadow:1px 1px 2px grey;
+	opacity:0.6;
+	cursor:pointer;
+	transition-duration:0.5s;
+	z-index:4;
+}
+
+.linkBtn:hover {
+	opacity:1.0;
+}
+
+#new {
+	position:fixed;
+	top:6%;
+	right:0;
+	background-color:rgba(152,152,152, 0.6);
+	padding:1%;
+	padding-right:5%;
+	border-left:10px solid white;
+	border-radius:5px 0 0 5px;
+	transition:0.3s;
+}
+
+#new:hover {
+	font-size:26px;
+}
+
