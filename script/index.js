@@ -31,7 +31,7 @@ function setlocalstore(setTime) {
 			//random number from 1-7
 			let random = Math.floor(Math.random() * imageNum);
 			//changing the bg image
-			$("body").css("background-image", "url('" + image[random+1].name + ".jpg')");
+			$("body").css("background-image", "url('picture/" + image[random+1].name + ".jpg')");
 			$("#photoBy").html(image[random+1].credits + " from <a href='https://www.pexels.com/'>pexels</a>");
 			e.preventDefault();
 			$.ajax( {
