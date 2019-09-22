@@ -14,3 +14,8 @@ Although the project are finished but there's much more improvement that could b
  - [ ] More background picture
 
  - [ ] Improve CSS usage
+
+
+### Got any question contact me by email or twitter
+ - Leonlit123@gmail.com
+ - https://twitter.com/leonlit
