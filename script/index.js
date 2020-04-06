@@ -16,23 +16,7 @@ function setlocalstore(setTime) {
 		last_time = localStorage.getItem("usertime");
 		//if user time is null or after the time is 10s forward
 		if ( last_time == null || (militime - last_time) > 5000) {
-			//variable
-			let imageNum = 6
-			//need to find ways to take totally random image from somewhere else
-			let image = {
-				1:{name:"star1",credits:"Photo by <a href='https://www.pexels.com/@francesco-ungaro'>Francesco Ungaro</a>"},
-				2:{name:"star2",credits:"Photo by <a href='https://www.pexels.com/@ettore'>Lucas Ettore Chiereguini</a>"},
-				3:{name:"star3",credits:"Photo by <a href='https://www.pexels.com/@juan-230850'>Juan</a>"},
-				4:{name:"star4",credits:"Photo by <a href='https://www.pexels.com/@haugsveenphoto'>tommy haugsveen</a>"},
-				5:{name:"star5",credits:"Photo by <a href='https://www.pexels.com/@minan1398'>Min An</a>"},
-				6:{name:"star6",credits:"Photo by <a href='https://www.pexels.com/@philippedonn'>Philippe Donn</a>"},
-				7:{name:"star7",credits:"Photo by <a href='https://www.pexels.com/@free-nature-stock'>Free Nature Stock</a>"}
-			}
-			//random number from 1-7
-			let random = Math.floor(Math.random() * imageNum);
-			//changing the bg image
-			$("body").css("background-image", "url('picture/" + image[random+1].name + ".jpg')");
-			$("#photoBy").html(image[random+1].credits + " from <a href='https://www.pexels.com/'>pexels</a>");
+			
 			e.preventDefault();
 			$.ajax( {
 				url: 'https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand',
