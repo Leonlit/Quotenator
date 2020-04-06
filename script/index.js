@@ -2,16 +2,13 @@ function setlocalstore(setTime) {
 	localStorage.setItem("usertime", setTime);
 }
 
-	let count = 0;
-	var svalue;
-	let apiLimitText = "Sorry but there's a 5s per API request to avoid spamming <br><br> Sorry for any inconvenient"
+let apiLimitText = "Sorry but there's a 5s per API request to avoid spamming <br><br> Sorry for any inconvenient"
 
-	$(window).on('load', function(e) {
-		quote();
-		function quote () {
-
-			var date = new Date();
-			var militime = date.getTime();
+$(window).on('load', function(e) {
+	quote();
+	function quote () {
+		let date = new Date();
+		let militime = date.getTime();
 
 		last_time = localStorage.getItem("usertime");
 		//if user time is null or after the time is 10s forward
@@ -21,7 +18,7 @@ function setlocalstore(setTime) {
 			$.ajax( {
 				url: 'https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand',
 				success: function(data) {
-					var post = data.shift();
+					let post = data.shift();
 					//quotes author and the contents
 					$('#author').text(" ~ " + post.title.rendered);
 					$('#content').html(post.content.rendered);
