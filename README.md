@@ -7,15 +7,7 @@ The project is responsive in both pc view and mobile view and any UI improvement
 
 All the background picture are downloaded from [pexel](https://www.pexels.com/)
 
-Although the project are finished but there's much more improvement that could be done and add.
 
-### Below are some to-do that I'm currently working on:
-
- - [ ] More background picture
-
- - [ ] Improve CSS usage
-
-
-### Got any question contact me by email or twitter
+### If you got any question or suggestion you can contact me through these: 
  - Leonlit123@gmail.com
  - https://twitter.com/leonlit
