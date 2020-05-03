@@ -156,6 +156,17 @@ a{
 	font-weight: 900;
 }
 
+.fadeIn {
+	opacity:1;
+	animation: fadeIn 0.5s;
+}
+
+.fadeOut {
+	opacity:0;
+	animation: fadeOut 0.5s;
+}
+
+
 #new:hover {
 	font-size:26px;
 	opacity:1.0;
@@ -165,4 +176,14 @@ a{
 	#content {
 		margin-top:50%;
 	}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }
