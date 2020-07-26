@@ -156,6 +156,27 @@ a{
 	font-weight: 900;
 }
 
+#code {
+	position: absolute;
+	bottom: 20%; 
+	right: 10%;
+	font-size:1.2em;
+	font-family:"Lucida Calligraphy";
+	text-shadow:1px 1px 2px grey;
+}
+
+footer {
+	position: absolute;
+	bottom:20px;
+	left:20px;
+	transition-duration:0.3s;
+}
+
+footer a:hover {
+	color: purple;
+	font-weight: 900;
+}
+
 .fadeIn {
 	opacity:1;
 	animation: fadeIn 0.5s;
