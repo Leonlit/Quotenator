@@ -1,8 +1,9 @@
 body {
-	background-size: 100% 100%;
 	background:rgb(224,224,224);
-	background-size: cover;
-	background-repeat:no-repeat;
+}
+
+.blockElement {
+	height:20%;
 }
 
 .custom_alert {
@@ -19,6 +20,7 @@ body {
 	transition-duration:0.3s;
 	text-align:center;
 	border-radius: 10px;
+	padding:5%;
 }
 
 .shader {
@@ -75,6 +77,8 @@ body {
 	line-height: .75em;
 	text-decoration:none;
 	color: white;
+	font-weight: 900;
+	font-size: 1.6em;
 	transition: 0.3s;
 	opacity:0.6;
 	padding:1%;
@@ -82,6 +86,7 @@ body {
 
 #sideNav .closebtn:hover {
 	opacity:1.0;
+	transform: scale(1.2);
 }
 
 a:visited {
@@ -116,21 +121,22 @@ a{
 
 #author {
 	font-family:Harrington;
-	margin-top:10%;
-	margin-bottom:5%;
 	text-align:center;
 	font-size:24px;
 	font-weight:900;
 	text-shadow:1px 1px 3px grey;
+	text-align: right;
+	margin-top:5vh;
 }
 
 #content {
 	text-align:center;
 	font-family:'Times New Roman', Times, serif,cursive;
 	font-size:1.5em;
-	margin-top:60%;
-	margin-left:10%;
-	max-width:80%;
+	margin-top:50vh;
+	margin-left:50%;
+	transform: translate(-50%, -50%);
+	width:80%;
 	word-wrap: break-word;
 	font-style:italic;
 	line-height: 1.6;
@@ -156,11 +162,6 @@ a{
 	font-weight: 900;
 }
 
-#code {
-	display: block;
-	margin-bottom:5%;
-}
-
 footer {
 	margin-left:20px;
 	transition-duration:0.3s;
@@ -172,6 +173,11 @@ footer {
 	text-shadow:1px 1px 2px grey;
 	color:white;
 	display: block;
+}
+
+footer > li {
+	list-style-type: none;
+	margin-bottom: 5%;
 }
 
 footer a {
@@ -192,22 +198,9 @@ footer a:hover {
 	animation: fadeOut 0.5s;
 }
 
-
 #new:hover {
 	font-size:26px;
 	opacity:1.0;
-}
-
-@media only screen and (min-width: 600px){
-	#content {
-		margin-top:40%;
-	}
-}
-
-@media only screen and (min-width: 1050px){
-	#content {
-		margin-top:20%;
-	}
 }
 
 @keyframes fadeIn {

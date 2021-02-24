@@ -21,16 +21,12 @@ $(window).on('load', function(e) {
 					let post = data.shift();
 					//quotes author and the contents
 					$("#content").removeClass("fadeIn");
-					$("#author").removeClass("fadeIn");
 					$("#content").addClass("fadeOut");
-					$("#author").addClass("fadeOut");
 					setTimeout(()=>{
 						$('#author').text(" ~ " + post.title.rendered);
-						$('#content').html(post.content.rendered);
+						$('#body').html(post.content.rendered);
 						$("#content").removeClass("fadeOut");
-						$("#author").removeClass("fadeOut");
 						$("#content").addClass("fadeIn");
-						$("#author").addClass("fadeIn");
 					}, 500);
 				},
 				cache: false

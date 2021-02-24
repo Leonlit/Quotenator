@@ -29,28 +29,31 @@
 		
 	</head>
 	<body>
-		<div class="shader"></div>
+		<div class="shader" onclick="closeNav()"></div>
 		<div id="menuIcon" onclick="openNav()">
 			<div class="menuIconPad"></div>
 			<div class="menuIconPad"></div>
 			<div class="menuIconPad"></div>
 		</div>
 		<div class="custom_alert"></div>
-		<div id="content"></div>
-		<div id="author"></div>
+		<div class="blockElement"></div>
+		<div id="content">
+			<div id="body"></div>
+			<div id="author"></div>
+		</div>
+		
 		<div id="new" class="linkBtn">New Quote</div>
 		
 		<div id="sideNav">
-			<i class="fas fa-times fa-3x closebtn" onclick="closeNav()"></i>
+			<i class="closebtn" onclick="closeNav()">X</i>
 			<div id="about">Hi and welcome to Quatenator, a simple quotes generator. I used JQuery, HTML, and CSS. The major function of this app 
 			is it generate random quote which is pretty awesome so after googling on the internet 
 			I found a great quote API provider, <a href='https://quotesondesign.com/'>quotesondesign</a>.
 			Well, thanks to it now this web app can generate a random quote.<br><br></div>
 			
 			<footer>
-				<a href="https://github.com/Leonlit/Quotenator" id="code">Source code</a>
+				<li><a href="https://github.com/Leonlit/Quotenator" target="_blank" id="code">Source code</a></li>
 				Developed By ~ <a href="https://github.com/Leonlit" target="_blank">leonlit</a>
-				
 			</footer>
 		</div><br>
 		
